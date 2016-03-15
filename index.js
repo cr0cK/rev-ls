@@ -6,7 +6,6 @@
 // ls *.png |rev-ls -r ./manifest.json
 // find ./dist -type f -regextype posix-extended -regex ".*\.(png|svg)" |rev-ls -r ./dist/manifest.json
 
-const md5 = require('md5');
 const fs = require('fs');
 const path = require('path');
 const commander = require('commander');
