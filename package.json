@@ -1,0 +1,33 @@
+{
+  "name": "rev-ls",
+  "version": "1.0.0",
+  "description": "Revved a list of files outputed by a `ls` or `find`.",
+  "bin": {
+    "rev-ls": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rev",
+    "file",
+    "md5"
+  ],
+  "author": "Alexis MINEAUD <alexis.mineaud@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cr0cK/rev-ls.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cr0cK/rev-ls/issues"
+  },
+  "homepage": "https://github.com/cr0cK/rev-ls#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "rev-file": "^2.0.0"
+  }
+}
