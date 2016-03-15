@@ -5,8 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.1] - 2016-03-15
+### Fix
+  - Remove useless require.
+
 ## 1.0.0 - 2016-03-15
 ### Added
   - Initial commit.
 
-[Unreleased]: https://github.com/cr0cK/rev-ls/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/cr0cK/rev-ls/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/cr0cK/rev-ls/compare/1.0.0...1.0.1
