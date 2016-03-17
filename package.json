@@ -1,6 +1,6 @@
 {
   "name": "rev-ls",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Revved a list of files outputed by a `ls` or `find`.",
   "bin": {
     "rev-ls": "index.js"
