@@ -48,10 +48,16 @@ process.stdin.on('end', function() {
     const fullRevedPath = revFile.sync(fullPath);
     const revedFileOnly = path.relative(process.cwd(), fullRevedPath);
 
-    mapping[file] = revedFileOnly;
+    // copy file
     fs.createReadStream(file).pipe(fs.createWriteStream(fullRevedPath));
 
-    process.stdout.write(`✔ ${file} -> ${revedFileOnly}\n`);
+    // add in mapping
+    const removeDots = new RegExp(/^\.?\/?/);
+    const file_ = file.replace(removeDots, '');
+    const revedFileOnly_ = revedFileOnly.replace(removeDots, '');
+    mapping[file_] = revedFileOnly_;
+
+    process.stdout.write(`✔ ${file_} -> ${revedFileOnly_}\n`);
   });
 
   // build manifest
