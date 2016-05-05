@@ -16,6 +16,7 @@ const revFileName = 'rev-manifest.json';
 
 commander
   .option('-r, --manifest <filename>', 'Manifest file')
+  .option('-m, --mv', 'move file instead of copy')
   .parse(process.argv);
 
 /* Main */
@@ -49,7 +50,11 @@ process.stdin.on('end', function() {
     const revedFileOnly = path.relative(process.cwd(), fullRevedPath);
 
     // copy file
-    fs.createReadStream(file).pipe(fs.createWriteStream(fullRevedPath));
+    if (commander.mv) {
+      fs.renameSync(fullPath, fullRevedPath);
+    } else {
+      fs.createReadStream(file).pipe(fs.createWriteStream(fullRevedPath));
+    }
 
     // add in mapping
     const removeDots = new RegExp(/^\.?\/?/);
