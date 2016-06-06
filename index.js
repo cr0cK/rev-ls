@@ -17,6 +17,7 @@ const revFileName = 'rev-manifest.json';
 commander
   .option('-r, --manifest <filename>', 'Manifest file')
   .option('-m, --mv', 'move file instead of copy')
+  .option('-t, --timeout <number>', 'Timeout to wait for data until the process exits', parseInt, 5000)
   .parse(process.argv);
 
 /* Main */
@@ -28,7 +29,7 @@ const timeID = setTimeout(() => {
   process.stdout.write('No data received from stdin!');
   commander.help();
   process.exit(1);
-}, 2000);
+}, commander.timeout);
 
 var dataStdin = '';
 process.stdin.on('data', function(data) {

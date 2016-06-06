@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.0] - 2016-06-03
+### Added
+  - Option to set the timeout. Default to 5000 ms.
+
 ## [1.1.0] - 2016-05-05
 ### Added
   - Add option to move assets, not just a copy.
